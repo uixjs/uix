@@ -1,0 +1,9 @@
+["uix.Node", {
+    "tag": "div"
+}, [
+    ["bs.Button", {
+        "name": "my_button",
+        "text": "Hello",
+        "span": 2
+    }]
+]]
