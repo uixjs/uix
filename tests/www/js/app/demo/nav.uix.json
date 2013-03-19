@@ -1,6 +1,23 @@
-["uix.Node", {"tag":"ul"}, [
-    ["NavItem", {"caption":"Button"}],
-    ["NavItem", {"caption":"Text"}],
-    ["NavItem", {"caption":"Checkbox"}],
-    ["NavItem", {"caption":"Date"}]
+["bs.Component", {
+    "tag": "ul",
+    "span": 2,
+    "css.nav": 1,
+    "css.nav-list": 1
+}, [
+    ["NavItem", {
+        "caption": "Button",
+        "href": "#button"
+    }],
+    ["NavItem", {
+        "caption": "Text",
+        "href": "#text"
+    }],
+    ["NavItem", {
+        "caption": "Checkbox",
+        "href": "#checkbox"
+    }],
+    ["NavItem", {
+        "caption": "Date",
+        "href": "#date"
+    }]
 ]]
