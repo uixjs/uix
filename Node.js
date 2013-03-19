@@ -39,6 +39,14 @@ define(function(require) {
             change : '_uiSet_color'
         },
 
+        ATTR_NS_css : {
+            change : '_uiSet_css'
+        },
+
+        ATTR_NS_attr : {
+            change : '_uiSet_attr'
+        },
+
         render: function() {
             var dom = this._dom = this._createDom();
             //Rendering children nodes.
@@ -93,6 +101,20 @@ define(function(require) {
 
         _uiSet_color: function(name, value) {
             this._dom.root.css('color', value);
+        },
+
+        _uiSet_css: function(name, value) {
+            var className = name.replace(/^css./, '');
+            if(value) {
+                this._dom.root.addClass(className);
+            } else {
+                this._dom.root.removeClass(className);
+            }
+        },
+
+        _uiSet_attr: function(name, value) {
+            var attrName = name.replace(/^attr./, '');
+            this._dom.root.attr(attrName, value);
         }
 
     });

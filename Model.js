@@ -23,10 +23,10 @@ define(function(require) {
         _change : function (attr, options) {
             options = options || {};
             if(!attr) {
-                var attrs = this._getAttributeDescriptions();
-                for(attr in attrs) {
-                    if(attr in this._bufferedChanges) {
-                        this._change(attr, options);
+                for(var attrName in this._bufferedChanges) {
+                    var attrDesc = this._getAttributeDescription(attrName);
+                    if(attrDesc) {
+                        this._change(attrName, options);
                     }
                 }
                 return;
@@ -56,7 +56,8 @@ define(function(require) {
             var output = {};
             for(var propName in this) {
                 if(0 === propName.indexOf('ATTR_')) {
-                    output[propName.replace(/^ATTR_/, '')] = this[propName];
+                    var attr = propName.replace(/^ATTR_/, '');
+                    output[attr] = this._getAttributeDescription(attr);
                 }
             }
             return output;
@@ -64,7 +65,25 @@ define(function(require) {
 
         _getAttributeDescription: function(attr) {
             var descName = 'ATTR_' + attr;
-            return this[descName];
+            var ns = this._getAttributeNamespace(attr);
+            var attrDesc = this[descName];
+            if(ns) {
+                var nsDesc = this._getAttributeNamespaceDescription(ns);
+                return $.extend({}, nsDesc, attrDesc);
+            } else {
+                return attrDesc;
+            }
+        },
+
+        _getAttributeNamespaceDescription: function(ns) {
+            return this['ATTR_NS_' + ns];
+        },
+
+        _getAttributeNamespace: function (attr) {
+            if(-1 !== attr.indexOf('.')) {
+                return attr.split('.')[0];
+            }
+            return null;
         },
 
         _validateAttribute : function (attr, val) {
