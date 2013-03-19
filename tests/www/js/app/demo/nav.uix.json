@@ -1,0 +1,6 @@
+["uix.Node", {"tag":"ul"}, [
+    ["NavItem", {"caption":"Button"}],
+    ["NavItem", {"caption":"Text"}],
+    ["NavItem", {"caption":"Checkbox"}],
+    ["NavItem", {"caption":"Date"}]
+]]

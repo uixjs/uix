@@ -1,0 +1,3 @@
+["uix.Node", {"tag":"li"}, [
+    ["uix.Node", {"tag":"a", "name":"caption", "text":"Hello"}]
+]]
