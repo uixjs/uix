@@ -56,7 +56,10 @@ define(function(require) {
         },
 
         render : function () {
-            return this._node.render();
+            //Calling `_change` in order to reflect current attributes' values to UI.
+            var dom = this._node.render();
+            this._change(null, {internal:true});
+            return dom;
         }
     });
 });
