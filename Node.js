@@ -59,6 +59,23 @@ define(function(require) {
             return dom.root;
         },
 
+        clearChildren: function () {
+            var childrenContainer = this._dom.children;
+            for (var i = 0; i < this.children.length; i++) {
+                var child = this.children[i];
+                if('function' === typeof(child.destroy)) {
+                    child.destroy();
+                }
+            }
+            this.children = [];
+            childrenContainer.empty();
+        },
+
+        appendChild: function (child) {
+            this.children.push(child);
+            child.render().appendTo(this._dom.children);
+        },
+
         _renderChildren : function () {
             var childrenContainer = this._dom.children;
             if(!childrenContainer) {
