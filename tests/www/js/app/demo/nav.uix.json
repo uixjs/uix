@@ -11,13 +11,5 @@
     ["NavItem", {
         "caption": "Text",
         "href": "#text"
-    }],
-    ["NavItem", {
-        "caption": "Checkbox",
-        "href": "#checkbox"
-    }],
-    ["NavItem", {
-        "caption": "Date",
-        "href": "#date"
     }]
 ]]

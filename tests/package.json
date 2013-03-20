@@ -8,7 +8,8 @@
       "bootstrap": "http://twitter.github.com/bootstrap/assets/bootstrap.zip",
       "require-css": "github:guybedford/require-css/master",
       "text": "github:requirejs/text/2.0.3",
-      "boop": "github:jsmarkus/boop/master"
+      "boop": "github:jsmarkus/boop/master",
+      "path": "https://raw.github.com/mtrpcic/pathjs/master/path.js"
     }
   }
 }

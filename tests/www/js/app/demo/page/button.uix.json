@@ -1,0 +1,64 @@
+["bs.Component", {}, [
+    ["bs.Row", {}, [
+        ["bs.Button", {
+            "text": "Large",
+            "size": "LARGE"
+        }],
+        ["bs.Button", {
+            "text": "Normal"
+        }],
+        ["bs.Button", {
+            "text": "Small",
+            "size": "SMALL"
+        }],
+        ["bs.Button", {
+            "text": "Mini",
+            "size": "MINI"
+        }]
+    ]],
+    ["bs.Row", {}, [
+        ["bs.Button", {
+            "text": "Primary",
+            "type": "PRIMARY"
+        }],
+        ["bs.Button", {
+            "text": "Info",
+            "type": "INFO"
+        }],
+        ["bs.Button", {
+            "text": "Success",
+            "type": "SUCCESS"
+        }],
+        ["bs.Button", {
+            "text": "Warning",
+            "type": "WARNING"
+        }],
+        ["bs.Button", {
+            "text": "Danger",
+            "type": "DANGER"
+        }],
+        ["bs.Button", {
+            "text": "Inverse",
+            "type": "INVERSE"
+        }],
+        ["bs.Button", {
+            "text": "Link",
+            "type": "LINK"
+        }]
+    ]],
+    ["bs.Row", {}, [
+        ["bs.IconButton", {
+            "text": "Icon Button",
+            "iconRight": "DOWNLOAD"
+        }],
+        ["bs.IconButton", {
+            "text": "Icon Button",
+            "iconLeft": "UPLOAD"
+        }],
+        ["bs.IconButton", {
+            "text": "Icon Button",
+            "iconLeft": "UPLOAD",
+            "iconRight": "DOWNLOAD"
+        }]
+    ]]
+]]

@@ -1,5 +1,6 @@
 ["uix.Node", {
     "tag": "div"
 }, [
-    ["demo/Nav"]
+    ["demo/Nav"],
+    ["bs.Component", {"name":"panel", "span":8}]
 ]]
