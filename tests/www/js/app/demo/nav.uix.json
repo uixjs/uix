@@ -11,5 +11,9 @@
     ["NavItem", {
         "caption": "Text",
         "href": "#text"
+    }],
+    ["NavItem", {
+        "caption": "Menu",
+        "href": "#menu"
     }]
 ]]

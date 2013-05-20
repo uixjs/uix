@@ -6,12 +6,11 @@ define(function(require) {
     var $ = uix.$;
 
     return Component.extend({
-// .input-mini       { width: 60px; }
-// .input-small      { width: 90px; }
-// .input-medium     { width: 150px; }
-// .input-large      { width: 210px; }
-// .input-xlarge     { width: 270px; }
-// .input-xxlarge    { width: 530px; }
+
+        ATTR_value : {
+            change : '_uiSet_value'
+        },
+
         ATTR_size : {
             validate : '_validate_size',
             change : '_uiSet_size',
@@ -36,6 +35,7 @@ define(function(require) {
         },
 
         _bindEvents : function () {
+            this._dom.root.on('change', this._onDomChange.bind(this));
             // this._dom.root.on('click', this._onDomClick.bind(this));
         },
 
@@ -46,8 +46,15 @@ define(function(require) {
         _uiSet_size : function (name, value) {
             utils.setClassAttribute(this.ATTR_size._toClass,
                 this._dom.root, name, value);
-        }
+        },
 
+        _uiSet_value : function (name, value) {
+            this._dom.root.val(value);
+        },
+
+        _onDomChange : function () {
+            this.set('value', this._dom.root.val());
+        }
 
         // _onDomClick : function () {
         //     this.event.emitEvent('click');

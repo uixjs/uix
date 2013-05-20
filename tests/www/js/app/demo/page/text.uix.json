@@ -1,3 +1,19 @@
 ["bs.Component", {}, [
-    ["bs.TextInput", {}]
+    ["bs.Row", {}, [
+        ["bs.TextInput", {
+            "value": "hello world",
+            "name" : "text1"
+        }],
+        ["uix.Node", {
+            "tag" : "span",
+            "name" : "text1-value-echo"
+        }]
+    ]],
+    ["bs.Row", {}, [
+        ["bs.Button", {
+            "name" : "set-value-button",
+            "text" : "Set value programmatically",
+            "type" : "PRIMARY"
+        }]
+    ]]
 ]]

@@ -1,0 +1,17 @@
+["bs.Component", {}, [
+    ["bs.Row", {}, [
+        ["bs.Nav", {"type":"LIST"}, [
+            ["bs.MenuItem", {
+                "text": "hello"
+            }],
+            ["bs.MenuItem", {
+                "text": "disabled",
+                "disabled": 1
+            }],
+            ["bs.MenuItem", {
+                "text": "world",
+                "active": 1
+            }]
+        ]]
+    ]]
+]]

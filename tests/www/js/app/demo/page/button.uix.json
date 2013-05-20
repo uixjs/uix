@@ -60,5 +60,16 @@
             "iconLeft": "UPLOAD",
             "iconRight": "DOWNLOAD"
         }]
+    ]],
+    ["bs.Row", {}, [
+        ["bs.DropdownButton", {
+            "text": "Menu Button",
+            "iconRight": "CHEVRON_DOWN"
+        }, [
+            ["uix.Node", {
+                "tag":"a",
+                "text":"hello"
+            }]
+        ]]
     ]]
 ]]

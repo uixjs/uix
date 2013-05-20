@@ -18,6 +18,7 @@ define(function(require) {
 
     Path.map('#button').to(loadPage.bind(null, 'button'));
     Path.map('#text').to(loadPage.bind(null, 'text'));
+    Path.map('#menu').to(loadPage.bind(null, 'menu'));
 
     Path.listen();
 });
